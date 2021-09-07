@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Meals = () => {
+const PizzaItemForm = props => {
     return (
         <div>
             
