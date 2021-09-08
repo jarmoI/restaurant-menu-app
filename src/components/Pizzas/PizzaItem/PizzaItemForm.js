@@ -8,7 +8,7 @@ export const PizzaItemForm = (props) => {
       <Input
         label="amount"
         input={{
-          id: "amount",
+          id: "amount" + props.id,
           type: "number",
           min: 1,
           max: 5,

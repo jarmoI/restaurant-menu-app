@@ -1,20 +1,19 @@
 import React from "react";
 import classes from "./PizzaItem.module.css";
-import { PizzaItemForm } from './PizzaItemForm';
+import { PizzaItemForm } from "./PizzaItemForm";
 
 export const PizzaItem = (props) => {
-    
   const price = `$ ${props.price.toFixed(2)}`;
 
   return (
-    <li>
-      <div className={classes.pizza}>
+    <li className={classes.pizza}>
+      <div>
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-      <PizzaItemForm />
+        <PizzaItemForm id={props.id} />
       </div>
     </li>
   );
