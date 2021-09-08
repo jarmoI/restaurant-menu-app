@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./PizzaItem.module.css";
+import { PizzaItemForm } from './PizzaItemForm';
 
 export const PizzaItem = (props) => {
     
@@ -12,7 +13,9 @@ export const PizzaItem = (props) => {
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>
-      <div></div>
+      <div>
+      <PizzaItemForm />
+      </div>
     </li>
   );
 };

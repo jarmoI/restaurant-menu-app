@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./AvailableMeals.module.css";
-import { Card } from '../UI/Card';
+import { Card } from "../UI/Card";
 import { PizzaItem } from "./PizzaItem/PizzaItem";
 
 const pizzasList = [
@@ -33,6 +33,7 @@ const pizzasList = [
 export const AvailableMeals = (props) => {
   const pizzas = pizzasList.map((pizza) => (
     <PizzaItem
+      id={pizza.id}
       key={pizza.id}
       name={pizza.name}
       description={pizza.description}
@@ -41,12 +42,10 @@ export const AvailableMeals = (props) => {
   ));
 
   return (
-    <div>
-      <section className={classes.meals}>
-        <Card>
-          <ul>{pizzas}</ul>
-        </Card>
-      </section>
-    </div>
+    <section className={classes.meals}>
+      <Card>
+        <ul>{pizzas}</ul>
+      </Card>
+    </section>
   );
 };
